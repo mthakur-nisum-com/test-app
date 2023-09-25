@@ -1,0 +1,81 @@
+section.content {
+    section.grid-view-section {
+        margin-top: 2rem;
+        ul {
+           width: 100%;
+           display: flex;
+           flex-wrap: wrap;
+           flex-direction: row;
+           li {
+               margin-right: 2rem;
+               flex-basis: 17%;
+               margin-bottom: 2rem;
+               box-shadow: 5px 5px 20px 0px #000;
+               position: relative;
+               cursor: pointer;
+               z-index: 9;
+               img {
+                    height: 360px;
+                    width: 100%;
+                    z-index: 99999999;
+               }
+               div.content {
+                   position: absolute;
+                   left:-1000%;
+                   z-index: 0;
+                   top:0;
+                   height: 100%;
+                   width: 100%;
+                   background: rgba(#000, $alpha: 0.5);
+                   overflow: hidden;
+                   .content-section {
+                       position: absolute;
+                       top:-100%;
+                       padding: 2rem;
+
+                   }
+               }
+               &:hover {
+                   div.content {
+                       color:#FFF;
+                        transition: left .9s;
+                        left:0;
+                        z-index: 0;
+                        &:hover {
+                            div.content-section {
+                                transition: top 0.5s;
+                                top: 0;
+                            }
+                        }
+                   }
+               }
+           }
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    section.content {
+        section.grid-view-section {
+            margin-top: 2rem;
+            ul {
+               li {
+                   flex-basis: 25%;
+               }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width: 768px) {
+    section.content {
+        section.grid-view-section {
+            margin-top: 2rem;
+            ul {
+               li {
+                   flex-basis: 28%;
+               }
+            }
+        }
+    }
+}

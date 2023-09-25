@@ -1,0 +1,9 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+footer {
+    height: 2rem;
+    background: $appColor;
+    @include app-padding;
+    color: #FFF;
+}

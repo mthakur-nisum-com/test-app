@@ -1,0 +1,13 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+header {
+    padding: 0.3em 0;
+    @include  app-padding;
+    height: calc(3em - 0.6em);
+   
+    background-color: $appColor;
+    color: #FFF;
+    h1 {
+        font-size: 1.5em;
+    }
+}
